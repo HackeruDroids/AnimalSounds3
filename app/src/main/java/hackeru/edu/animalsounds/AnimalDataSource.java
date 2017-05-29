@@ -10,6 +10,9 @@ import java.util.List;
 public class AnimalDataSource {
     public static List<Animal> getAnimals(){
         ArrayList<Animal> animals = new ArrayList<>();
+        Animal a = new Animal(R.drawable.monkey, R.raw.monkey);
+        animals.add(a);
+
 
         animals.add(new Animal(R.drawable.cat,R.raw.cat));
         animals.add(new Animal(R.drawable.duck,R.raw.duck));
