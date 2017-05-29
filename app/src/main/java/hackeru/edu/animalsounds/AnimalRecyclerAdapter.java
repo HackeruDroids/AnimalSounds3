@@ -80,7 +80,6 @@ public class AnimalRecyclerAdapter extends RecyclerView.Adapter<AnimalRecyclerAd
                     }
                 });
             }
-
         }
     }
 
