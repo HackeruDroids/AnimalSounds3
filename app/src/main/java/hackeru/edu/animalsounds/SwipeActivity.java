@@ -20,7 +20,6 @@ public class SwipeActivity extends AppCompatActivity {
     }
 
     class MyPagerAdapter extends FragmentStatePagerAdapter{
-
         //Constructor:
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);

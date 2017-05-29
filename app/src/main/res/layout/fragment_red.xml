@@ -1,9 +1,10 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
-    android:background="#f00"
+    android:id="@+id/rvAnimals"
     tools:context="hackeru.edu.animalsounds.RedFragment">
 
 
-</FrameLayout>
+</android.support.v7.widget.RecyclerView>
