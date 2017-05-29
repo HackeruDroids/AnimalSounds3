@@ -1,10 +1,13 @@
 package hackeru.edu.animalsounds;
 
 import android.content.Context;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.List;
 
@@ -12,7 +15,7 @@ import java.util.List;
  * Created by hackeru on 29/05/2017.
  */
 
-public class AnimalRecyclerAdapter extends RecyclerView.Adapter<AnimalViewHolder> {
+public class AnimalRecyclerAdapter extends RecyclerView.Adapter<AnimalRecyclerAdapter.AnimalViewHolder> {
     //Properties:
     private List<Animal> animals;
     private LayoutInflater inflater;
@@ -48,4 +51,38 @@ public class AnimalRecyclerAdapter extends RecyclerView.Adapter<AnimalViewHolder
     public int getItemCount() {
         return animals.size();
     }
+
+    /**
+     * View Holder: holds the views: find the views by id. save the references to the views.
+     */
+    public class AnimalViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        ImageView ivAnimal;
+        public AnimalViewHolder(View v) {
+            super(v);
+            ivAnimal = (ImageView) v.findViewById(R.id.ivAnimal);
+            v.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(final View v) {
+            int position = getAdapterPosition();
+            //sout->light bulb
+            Animal a = animals.get(position);
+
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, a.getSoundResID());
+            mediaPlayer.start();
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                v.animate().rotation(-45).withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        v.animate().rotation(45);
+                    }
+                });
+            }
+
+        }
+    }
+
+
 }

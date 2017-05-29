@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rvAnimals"
-    android:layout_margin="16dp"
+    android:background="@drawable/whatsapp"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="hackeru.edu.animalsounds.ScrollingActivity"
     tools:showIn="@layout/activity_scrolling">

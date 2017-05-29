@@ -32,8 +32,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:scaleType="centerCrop"
+                android:paddingBottom="90dp"
                 android:layout_height="200dp"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@drawable/unnamed"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>

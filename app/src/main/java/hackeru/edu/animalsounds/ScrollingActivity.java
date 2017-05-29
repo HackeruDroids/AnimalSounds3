@@ -3,7 +3,7 @@ package hackeru.edu.animalsounds;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -22,7 +22,8 @@ public class ScrollingActivity extends AppCompatActivity {
         //setup recycler:
         RecyclerView rvAnimals = (RecyclerView) findViewById(R.id.rvAnimals); //fbc
         rvAnimals.setAdapter(new AnimalRecyclerAdapter(this));
-        rvAnimals.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
+        //rvAnimals.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
+        rvAnimals.setLayoutManager(new GridLayoutManager(this, 3));
     }
 
     @Override
